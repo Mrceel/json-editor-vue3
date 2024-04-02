@@ -1,0 +1,44 @@
+{
+  "name": "@ceel/json-editor",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": ["dist", "README.md"],
+  "main": "./dist/JsonEditor.umd.cjs",
+  "module": "./dist/JsonEditor.js",
+  "exports": {
+    ".": {
+      "import": "./dist/JsonEditor.js",
+      "require": "./dist/JsonEditor.umd.cjs"
+    }
+  },
+  "keywords": [
+    "json",
+    "editor",
+    "vue",
+    "vue3"
+  ],
+  "author": "ceel <mrceel@163.com>",
+  "license": "MIT",
+  "description": "一个基于JsonEditor、vue3的json编辑器",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ceel/json-editor"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "jsoneditor": "^10.0.2",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
