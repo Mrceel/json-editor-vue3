@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^20.12.2
   '@vitejs/plugin-vue': ^5.0.4
+  ceel-json-editor-vue3: ^0.0.2
   jsoneditor: ^10.0.2
   typescript: ^5.2.2
   vite: ^5.2.0
@@ -10,6 +11,7 @@ specifiers:
   vue-tsc: ^2.0.6
 
 dependencies:
+  ceel-json-editor-vue3: 0.0.2_typescript@5.4.3
   jsoneditor: 10.0.2
   vue: 3.4.21_typescript@5.4.3
 
@@ -299,6 +301,7 @@ packages:
     resolution: {integrity: sha512-L1+D8/wqGnKQIlh4Zre9i4R4b4noxzH5DDciyahX4oOz62CphY7WDWqJoQ66zNR4oScLNOqQJfNSIAe/6TPUmQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -307,6 +310,7 @@ packages:
     resolution: {integrity: sha512-tK5eoKFkXdz6vjfkSTCupUzCo40xueTOiOO6PeEIadlNBkadH1wNOH8ILCPIl8by/Gmb5AGAeQOFeLev7iZDOA==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true
@@ -315,6 +319,7 @@ packages:
     resolution: {integrity: sha512-zvXvAUGGEYi6tYhcDmb9wlOckVbuD+7z3mzInCSTACJ4DQrdSLPNUeDIcAQW39M3q6PDquqLWu7pnO39uSMRzQ==}
     cpu: [ppc64le]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -323,6 +328,7 @@ packages:
     resolution: {integrity: sha512-C3GSKvMtdudHCN5HdmAMSRYR2kkhgdOfye4w0xzyii7lebVr4riCgmM6lRiSCnJn2w1Xz7ZZzHKuLrjx5620kw==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -331,6 +337,7 @@ packages:
     resolution: {integrity: sha512-l4U0KDFwzD36j7HdfJ5/TveEQ1fUTjFFQP5qIt9gBqBgu1G8/kCaq5Ok05kd5TG9F8Lltf3MoYsUMw3rNlJ0Yg==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -339,6 +346,7 @@ packages:
     resolution: {integrity: sha512-xXMLUAMzrtsvh3cZ448vbXqlUa7ZL8z0MwHp63K2IIID2+DeP5iWIT6g1SN7hg1VxPzqx0xZdiDM9l4n9LRU1A==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: true
     optional: true
@@ -347,6 +355,7 @@ packages:
     resolution: {integrity: sha512-M/JYAWickafUijWPai4ehrjzVPKRCyDb1SLuO+ZyPfoXgeCEAlgPkNXewFZx0zcnoIe3ay4UjXIMdXQXOZXWqA==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: true
     optional: true
@@ -523,6 +532,15 @@ packages:
     dependencies:
       balanced-match: 1.0.2
     dev: true
+
+  /ceel-json-editor-vue3/0.0.2_typescript@5.4.3:
+    resolution: {integrity: sha512-k9oJxQt8Xb3Y7duXecsP7O+N+9w2b7l5iZ3qw8hj8fK4WDVTrskLViJsqLuIDO7G23DYpv1Oe+um4nfc8g01LA==}
+    dependencies:
+      jsoneditor: 10.0.2
+      vue: 3.4.21_typescript@5.4.3
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /computeds/0.0.1:
     resolution: {integrity: sha512-7CEBgcMjVmitjYo5q8JTJVra6X5mQ20uTThdK+0kR7UEaDrAWEQcRiBtWJzga4eRpP6afNwwLsX2SET2JhVB1Q==}

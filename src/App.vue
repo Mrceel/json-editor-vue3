@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // import HelloWorld from './components/JsonEditor.vue'
-import HelloWorld from './components/JsonEditor'
+import JsonEditor from './components/JsonEditor'
+// import JsonEditor from 'ceel-json-editor-vue3'
+
 
 const c = ref(`{"abd":121212123,"abc":1999999998}`)
 
@@ -16,7 +18,7 @@ const op = {
 
 <template>
   
-  <HelloWorld height="500px" v-model="c" :option="op" />
+  <JsonEditor height="500px" v-model="c" :option="op" />
 
 
   {{ c }}

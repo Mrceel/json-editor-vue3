@@ -1,9 +1,98 @@
-# Vue 3 + TypeScript + Vite
+# JsonEditor
+Vue3 JSON online editor developed based on JSONeditor.
+基于 jsoneditor 开发的 vue3 json在线编辑器。
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+1. Fully compatible with all functions of JSONEDITOR, and supports Vue3 syntax.
 
-## Recommended Setup
+    完全兼容 jsoneditor 所有功能，并且支持 vue3 语法。
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+2. Support all configurations of JSONEDITOR, simple 
+    
+    支持  jsoneditor 的所有配置， 简单的配置方式。
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+3. More flexible, support custom configuration.
+    
+    更加灵活， 支持自定义配置。
+
+## Install
+
+```bash
+    npm install ceel-json-editor
+    # or
+    yarn add ceel-json-editor
+    # or
+    pnpm add ceel-json-editor
+```
+
+[JsonEditor API文档](https://github.com/josdejong/jsoneditor/blob/master/docs/api.md#configuration-options)
+
+## Use
+
+### Global import
+```
+import Vue from 'vue'
+import JsonEditorVue from 'ceel-json-editor'
+
+Vue.use(JsonEditorVue)
+```
+
+### Local introduction
+```
+    import JsonEditor from 'ceel-json-editor'
+
+```
+## Parameter description
+|Attributes| Type | Default Value | Description |
+| --- | --- | --- | --- |
+| v-model | - | - | - |
+| height | string | 100% | height |
+| width | string | 100% | width |
+| option | object | - | options |
+
+## Configuration item
+|Attributes| Type | Default Value | Description |
+| --- | --- | --- | --- |
+| mode | string | 'code' | Edit mode, optional value：'code'、'tree'、'form' |
+| onChange | function | - | Value change event |
+....
+
+[JsonEditor API文档](https://github.com/josdejong/jsoneditor/blob/master/docs/api.md#configuration-options)
+
+
+
+## Example
+```js
+<script setup lang="ts">
+import { ref } from 'vue'
+
+import JsonEditor from 'ceel-json-editor'
+
+// Set default value 
+const c = ref(`{"abd":121212123,"abc":1999999998}`)
+
+/**
+* For all configuration items, see： 
+* 请查看 api 文档
+* https://github.com/josdejong/jsoneditor/blob/master/docs/api.md#configuration-options
+ */
+const option = {
+  mode: 'code', // Override default configuration
+  onChange: (v: string) => { // Add change event
+    console.log(v)
+  },
+}
+</script>
+
+<template>
+  
+  <JsonEditor height="500px" v-model="c" :option="option" />
+
+</template>
+
+```
+
+
+## Donate 捐赠
+
+[paypalme](https://paypal.me/cyq521?country.x=C2&locale.x=zh_XC)
+

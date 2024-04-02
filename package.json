@@ -1,9 +1,12 @@
 {
-  "name": "@ceel/json-editor",
+  "name": "ceel-json-editor",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "main": "./dist/JsonEditor.umd.cjs",
   "module": "./dist/JsonEditor.js",
   "exports": {
@@ -15,6 +18,12 @@
   "keywords": [
     "json",
     "editor",
+    "json-editor",
+    "@ceel/json-editor",
+    "json-editor-vue3",
+    "vuejsoneditor",
+    "json-scheme-editor-vue",
+    "json-editor-vue",
     "vue",
     "vue3"
   ],
@@ -23,7 +32,7 @@
   "description": "一个基于JsonEditor、vue3的json编辑器",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ceel/json-editor"
+    "url": "https://github.com/Mrceel/json-editor-vue3"
   },
   "scripts": {
     "dev": "vite",
@@ -31,6 +40,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ceel-json-editor-vue3": "^0.0.2",
     "jsoneditor": "^10.0.2",
     "vue": "^3.4.21"
   },
